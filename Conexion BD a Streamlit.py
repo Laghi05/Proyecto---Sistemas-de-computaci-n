@@ -70,6 +70,7 @@ df = cargar_datos()
 print(df.head())
 
 # Boton para la actualización de los datos manualmente en la pagina de Streamlit
+# Agregar este boton para actualizar los datos en la pagina #
 
 if st.button('Actualizar datos'):
     df = cargar_datos()
