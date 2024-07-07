@@ -1,4 +1,4 @@
-# Importacion del modulo de instalacion de paquetes
+# Importacion de librerias
 import pyodbc
 import pip
 import streamlit as st
