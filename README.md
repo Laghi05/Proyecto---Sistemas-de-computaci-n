@@ -1,1 +1,0 @@
-# Proyecto---Sistemas-de-computaci-n
