@@ -72,9 +72,9 @@ print(df.head())
 # Boton para la actualización de los datos manualmente en la pagina de Streamlit
 # Agregar este boton para actualizar los datos en la pagina #
 
-if st.button('Actualizar datos'):
-    df = cargar_datos()
-    st.write(df.head())
+#if st.button('Actualizar datos'):
+    #df = cargar_datos()
+    #st.write(df.head())
 #######################################################################################
 
 #vih_dashboard
@@ -101,10 +101,6 @@ st.title(" :female-doctor: VIH en la República Dominicana")
 # Definicion de 2.5rem (40 pixeles) de espacio entre el borde superior de cada elemento y su contenido
 
 st.markdown('<style>div.block-container{padding-top:2.5rem;}</style>',unsafe_allow_html=True)
-
-# Formato cantidad de casos
-
-df["Cant_Casos"] = pd.to_numeric(df["Cant_Casos"])
 
 # Crear seccion de filtros en un lado desplegable de la interfaz
 
