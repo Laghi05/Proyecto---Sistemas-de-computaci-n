@@ -77,6 +77,10 @@ if st.button('Actualizar datos'):
     st.write(df.head())
 #######################################################################################
 
+#vih_dashboard
+
+# Importar librerias necesarias
+
 import streamlit as st
 import plotly.express as px
 import pandas as pd
@@ -97,6 +101,10 @@ st.title(" :female-doctor: VIH en la República Dominicana")
 # Definicion de 2.5rem (40 pixeles) de espacio entre el borde superior de cada elemento y su contenido
 
 st.markdown('<style>div.block-container{padding-top:2.5rem;}</style>',unsafe_allow_html=True)
+
+# Formato cantidad de casos
+
+df["Cant_Casos"] = pd.to_numeric(df["Cant_Casos"])
 
 # Crear seccion de filtros en un lado desplegable de la interfaz
 
@@ -154,6 +162,6 @@ col1, col2 = st.columns((2))
 # Grafica de barras
 
 st.subheader("Casos por provincia")
-fig = px.bar(category_df, x = "Provincia", y = "Cant_Casos", text = ['{:,.2f}'.format(int(x.replace(",", ""))) for x in category_df["Cant_Casos"]],
+fig = px.bar(category_df, x = "Provincia", y = "Cant_Casos", text = ['{:,.2f}'.format(x) for x in category_df["Cant_Casos"]],
             template = "seaborn")
 st.plotly_chart(fig,use_container_width=True, height = 200)
